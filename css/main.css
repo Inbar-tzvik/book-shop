@@ -1,0 +1,232 @@
+body {
+  background-image: url('/img/book.jpeg');
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow-x: hidden;
+
+  /* padding: 0 40px; */
+}
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+table {
+  width: 800px;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: rgb(15, 4, 4);
+}
+
+th {
+  text-align: left;
+}
+
+thead,
+th {
+  background-color: #55608f;
+}
+
+tbody,
+tr :hover {
+  background-color: rgba(212, 117, 181, 0.3);
+}
+
+/* td {
+  position: relative;
+  :hover {
+    :before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -9999px;
+      bottom: -9999px;
+      background-color: rgba(255, 255, 255, 0.2);
+      z-index: -1;
+    }
+  }
+} */
+
+/* table {
+  border-collapse: collapse;
+  border: 2px solid rgb(200, 200, 200);
+  letter-spacing: 1px;
+  font-family: sans-serif;
+  font-size: 0.8rem;
+}
+thead {
+  background-color: #3f87a6;
+  color: #fff;
+}
+tbody {
+  background-color: #e4f0f5;
+}
+
+td,
+th {
+  border: 1px solid rgb(190, 190, 190);
+  padding: 5px 10px;
+}
+th {
+  cursor: pointer;
+}
+td {
+  text-align: center;
+} */
+button {
+  color: white;
+}
+.add-button {
+  margin-top: 20px;
+
+  color: black;
+}
+.read {
+  background-color: blue;
+}
+.update {
+  background-color: orange;
+}
+
+.delete {
+  background-color: red;
+}
+.modal {
+  background-color: rgb(152, 124, 230);
+  padding: 10px;
+  position: absolute;
+  top: 0px;
+  left: 150%;
+  height: 80vh;
+  min-width: 300px;
+  text-align: center;
+}
+.modal button {
+  color: #111;
+}
+.open {
+  color: white;
+  left: 50%;
+  transition: left 0.5s;
+}
+/* .modal.close {
+  color: white;
+  left: 150%;
+  transition: right 0.5s;
+} */
+button {
+  cursor: pointer;
+  outline: 0;
+}
+/* .add-book {
+  display: none;
+} */
+.add-book {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.add-book-content {
+  background-image: linear-gradient(180deg, rgb(137, 241, 146), rgb(192, 235, 179));
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* CSS */
+.add-button {
+  appearance: button;
+  background-color: #1899d6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter 0.2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 20%;
+}
+
+.add-button:after {
+  background-clip: padding-box;
+  background-color: #1cb0f6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.add-button:main,
+.add-buttonfocus {
+  user-select: auto;
+}
+
+.add-button:hover:not(:disabled) {
+  filter: brightness(1.1);
+}
+
+.add-button:disabled {
+  cursor: auto;
+}

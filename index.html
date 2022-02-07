@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Book Store</title>
+  </head>
+  <body onload="onInit()">
+    <h1>Book Store</h1>
+    <div class="container">
+      <table>
+        <thead>
+          <tr>
+            <th onclick="onSortBy(this)">Id</th>
+            <th onclick="onSortBy(this)">Title</th>
+            <th onclick="onSortBy(this)">Price</th>
+            <th colspan="3">Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <button class="add-button" onclick="onPopUp()">Add a new book</button>
+    <div class="add-book">
+      <div class="add-book-content">
+        <span class="close" onclick="closePop()">&times;</span>
+        <span> Book's Name</span>
+        <input class="name" type="text" />
+        <span> Book's Price</span>
+        <input class="price" type="number" />
+        <button class="add-button" onclick="onAddBook()">Add</button>
+      </div>
+    </div>
+    <div class="pop"></div>
+
+    <script src="js/util.js"></script>
+    <script src="js/storage.service.js"></script>
+    <script src="js/book.service.js"></script>
+    <script src="js/book.contrller.js"></script>
+  </body>
+</html>
